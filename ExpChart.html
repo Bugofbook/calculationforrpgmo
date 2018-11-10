@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>經驗值.html</title>
+<link rel="stylesheet" href="ChildCSS.css" type="text/css">
+<script type="text/javascript" src="FunctionForRPGMO.js"></script>
+<script type="text/javascript" src="FunctionForGUI.js"></script> 
+<script>
+    function ShowNeedExp(ObFORM,ObSHOW)
+    {
+        var A0 = Number(ObFORM.elements["startLv"].value) ;
+        var A1 = Number(ObFORM.elements["FinalLv"].value) ;
+        var A2 = Number(ObFORM.elements["NeedExp"].value) ;
+        var EXP = RanExp( ( A0 + 1 ) , A1 ) + A2 ;
+        ObSHOW.innerHTML = "<p>需求經驗值為:" + addCommas(EXP) + "</p>" ;
+        ReHeightsize() ;
+    }
+    function ShowExpTable(ObFORM,ObSHOW)
+    {
+        var A0 = Number(ObFORM.elements["startLv"].value) ;
+        var A1 = Number(ObFORM.elements["FinalLv"].value) ;
+        ObSHOW.innerHTML = "<tr><th>等級</th><th>升到下一個等級時需要的經驗值</th><th>累計經驗值</th></tr>" ;
+        for (var i = A0 ; i <= A1 ; i++ )
+        {
+            ObSHOW.innerHTML += "<tr><td>" + i + "</td><td>" + addCommas( RanExp( i , (i + 1 ) ) ) + "</td><td>"+ addCommas( Exp(i) ) + "</td></tr>";
+        }
+        ReHeightsize() ;        
+    }
+    function Clear(ObSHOW)
+    {
+        ObSHOW.innerHTML = "" ;
+        ReHeightsize() ;
+    }
+</script>
+</head>
+<body onload="ReHeightsize()" >
+<section>
+    <p>無論是何種技能，把技能從等級1升級到等級n所需要的經驗值都是由同一種公式計算出來。</p>
+</section>
+<section>
+<h2>經驗值表格</h2>
+    <form id="ExpTable"  name="ExpTable">
+    起點等級:<input type="text" name="startLv" value="1" size="2"><br/>
+    終點等級:<input type="text" name="FinalLv" value="2" size="2"><br/>
+    <input type="button" onclick="ShowExpTable(ExpTable,TableShow)" value="顯示表格">
+    <input type="button" onclick=" Clear(TableShow)" value="清除表格"><br/>
+    </form>
+<table id="TableShow" border="1"></table>
+</body>
+</html>
