@@ -1,16 +1,21 @@
-/* eslint-disable react/react-in-jsx-scope */
-
+import React from 'react'
 import { NewMaterialItem, NewProductItem, MaterialItems, ProductItems, Calculation, ShowItem} from './containers';
 import '../stylesheets/App.css'
 
 const App = () => 
 <div className="app" >
-  <NewMaterialItem />
-  <NewProductItem />
-  <Calculation />
-  <ShowItem />
-  <MaterialItems />
-  <ProductItems />
+  <div>
+    <NewMaterialItem />
+    <NewProductItem />
+    <Calculation />
+    <ShowItem />
+  </div>
+  <div>
+    <MaterialItems />
+  </div>
+  <div>
+    <ProductItems />
+  </div>
 </div>
 
 export default App;
@@ -18,6 +23,7 @@ export default App;
 
 
 /*
+//舊版
 import React, { Component } from 'react';
 import './App.css';
 import AddProductItemForm from './AddProductItemForm';
@@ -137,13 +143,7 @@ class App extends Component {
       <div className="App">
         <div>
           <AddMaterialItemForm onNewItem={addMaterialItem} />
-          <MaterialItemList items={materialitems} key={1} onRemove={(id) => removeItem(1, materialitems, id)} />
-        </div>
-        <div>
           <AddProductItemForm onNewItem={addProductItem} />
-          <ProductItemList items={productitems} key={2} onRemove={(id) => removeItem(2, productitems, id)} />
-        </div>
-        <div>
           {
             ((materialitems.length === 0) || (productitems.length === 0)) ?
             <p></p> :
@@ -151,6 +151,12 @@ class App extends Component {
           }
           {(calresult.length === 0 ) ? <p></p> : <button onClick={clearResult}>清除結果</button> }
           <Showresult calresult={calresult} />
+        </div>
+        <div>
+          <MaterialItemList items={materialitems} key={1} onRemove={(id) => removeItem(1, materialitems, id)} />
+        </div>
+        <div>
+          <ProductItemList items={productitems} key={2} onRemove={(id) => removeItem(2, productitems, id)} />
         </div>
       </div>
     );
