@@ -1,0 +1,31 @@
+{
+  "materialitems": [{
+    "id": 0,
+    "title": "coal",
+    "amount": 1,
+    "value": 500
+  },
+  {
+    "id": 1,
+    "title": "iron orc",
+    "amount": 1,
+    "value": 180
+  }],
+  "productitems": [{
+    "id": 0,
+    "title": "steel bar",
+    "minLv": 40,
+    "minPr": 0.4,
+    "maxLv": 100 , 
+    "maxPr": 1,
+    "value": 960,
+    "exp": 30
+  }],
+  "calresult": {
+    "nextexp":  100,
+    "nowlevel": 100,
+    "targetlevel": 110
+  }
+}
+
+  
