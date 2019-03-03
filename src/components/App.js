@@ -61,7 +61,11 @@ class App extends Component {
           value: 960,
           exp: 30,
         }],
-        calresult: {}
+        calresult: {
+          nowlevel: 100,
+          targetlevel: 110,
+          nextexp: 100,
+        }
     }
     this.addProductItem = this.addProductItem.bind(this)
     this.addMaterialItem = this.addMaterialItem.bind(this)
@@ -111,12 +115,9 @@ class App extends Component {
       this.setState({productitems: Newitems })
     }
   }
-  calculationResult(level1, level2, exp1) {    
+  calculationResult(nowlevel, targetlevel, nextexp) {    
     let productitems = this.state.productitems
     let materialitems = this.state.materialitems
-    let nowlevel = parseInt(level1,10)
-    let targetlevel = parseInt(level2,10)
-    let nextexp = parseInt(exp1,10)
     let totalAmount = WorkingCount(productitems,nextexp,nowlevel,targetlevel)
     let productAmounts = GetProductAmount(productitems,nextexp,nowlevel,targetlevel)
     let needAmounts = materialitems.map( item => item.amount)
