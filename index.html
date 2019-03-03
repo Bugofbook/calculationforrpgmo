@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="generator" content="PSPad editor, www.pspad.com">
+<title>RPGMO-技能計算器</title>
+<style>
+    header, section, footer, aside, nav, article
+    {
+        display: block;
+    }
+    header 
+    {
+        height: 110px;
+        color: #200f08;
+        background: #ddd3bf;
+    }
+    nav 
+    {  
+        left: 0;  
+    }
+    nav ul 
+    {  
+        margin: 0 auto;  
+        list-style: none;  
+    }  
+    nav ul li 
+    {  
+        float: left;  
+    }  
+    nav ul li a 
+    {  
+        display: block;  
+        margin-right: 20px;  
+        font-size: 14px;
+        line-height: 4px;  
+        text-align: center;  
+        text-decoration: none;  
+        color: #777;  
+    }  
+    section 
+    {
+      min-height: 400px;
+    }
+    footer{
+      height: 50px;
+      color: #200f08 ;
+      background: #ddd3bf;
+    }
+</style>
+</head>
+<body>
+<header>
+  <h1>RPGMO-技能計算器</h1>
+  <nav>
+<!-- 子頁面的超連結  -->
+    <ul>
+      <li><a href="StartPage.html" target="iframe_a" >首頁</a></li> 
+      <li><a href="ExpChart.html" target="iframe_a" >經驗值表格</a></li>
+      <li><a href="Calculation.html" target="iframe_a" >萬用計算器</a></li>
+      <li><a href="GatheringSkill.html" target="iframe_a" >常用的採集</a></li>
+      <li><a href="CraftingSkill.html" target="iframe_a" >常用手工藝</a></li>
+      <li><a href="FightingSkill.html" target="iframe_a" >打怪用</a></li>
+    </ul>
+  </nav>
+</header> 
+<section>
+<!-- 顯示子頁面的內容 -->
+    <iframe src="StartPage.html" name="iframe_a" width="100%" height="100%" id="mainframe"></iframe>
+</section>
+<footer>
+  <p>版本:0.2</p>
+</footer>
+</body>
+</html>
