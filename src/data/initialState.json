@@ -1,5 +1,5 @@
 {
-  "materialitems": [{
+  "MaterialItems": [{
     "id": 0,
     "title": "coal",
     "amount": 1,
@@ -11,7 +11,7 @@
     "amount": 1,
     "value": 180
   }],
-  "productitems": [{
+  "ProductItems": [{
     "id": 0,
     "title": "steel bar",
     "minLv": 40,
@@ -21,11 +21,7 @@
     "value": 960,
     "exp": 30
   }],
-  "calresult": {
-    "nextexp":  100,
-    "nowlevel": 100,
-    "targetlevel": 110
-  }
+  "calresult": {}
 }
 
   

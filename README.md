@@ -45,6 +45,3 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 
 =====================================================
-
-修改自 https://github.com/MoonHighway/learning-react/tree/master/chapter-09/color-organizer
-但containter好像有問題??https://github.com/Bugofbook/calculationforrpgmo/blob/master/src/components/containers.js
