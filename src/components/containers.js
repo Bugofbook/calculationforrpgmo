@@ -37,7 +37,6 @@ export const MaterialItems = connect(
     })
 )(MaterialItemList)
 
-
 export const ProductItems = connect(
     state => ({
         items: [...state.ProductItems]

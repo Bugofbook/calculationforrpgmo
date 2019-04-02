@@ -1,9 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import App from './components/App';
-import storeFactory from './store';
+import { HashRouter, Route, Switch } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
+
+import { Home, Combat, Crafting, Calculation, Gathering, Whoops404 } from "./pages";
+import storeFactory from './store';
 
 const store = storeFactory()
 
@@ -12,7 +14,16 @@ window.store = store
 
 render(
     <Provider store={store}>
-        <App />
+        <HashRouter>
+        <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/Combat" component={Combat} />
+            <Route path="/Crafting" component={Crafting} />
+            <Route path="/Gathering" component={Gathering} />
+            <Route path="/Calculation" component={Calculation} />
+            <Route component={Whoops404} />
+        </Switch>
+        </HashRouter>
     </Provider>,
     document.getElementById('root')
 );
