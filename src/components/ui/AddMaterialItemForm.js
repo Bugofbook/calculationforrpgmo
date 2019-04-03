@@ -19,16 +19,16 @@ const AddMaterialItemForm = ({onNewItem=f=>f}) => {
        <table>
        <tbody>
        <tr>
-              <td>物品名稱</td>
-              <td><input ref={input => _title = input} type="text" placeholder="物品名稱" required/></td>
+              <td>Item Name</td>
+              <td><input ref={input => _title = input} type="text" placeholder="Item Name" required/></td>
        </tr>
        <tr>
-              <td>需求量</td>
-              <td><input ref={input => _amount = input} type="number" placeholder="需求量" required/></td>
+              <td>Demand</td>
+              <td><input ref={input => _amount = input} type="number" placeholder="Demand" required/></td>
        </tr>
        <tr>
-              <td>系統價格</td>
-              <td><input ref={input => _value = input} type="number" placeholder="系統價格" required/></td>
+              <td>Value</td>
+              <td><input ref={input => _value = input} type="number" placeholder="Value" required/></td>
        </tr>
        </tbody>
        </table>

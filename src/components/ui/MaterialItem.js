@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 
 const MaterialItem = ({ id, title, amount, value, onRemove=f=>f}) =>
     <section className="item">
-        <h1>第{id + 1}種原料</h1>
+        <h1>the {id + 1}-th Material</h1>
         <button onClick={onRemove}>X</button>
-        <p>原料名稱:{title}</p>
-        <p>原料用量:{amount}</p>
-        <p>原料價格:{value}</p>
+        <p>Matherial Name:{title}</p>
+        <p>Matherial Demand:{amount}</p>
+        <p>Matherial Value:{value}</p>
     </section>
 
 MaterialItem.propTypes = {

@@ -6,7 +6,7 @@ const MaterialItemList = ({ items=[], onRemove=f=>f }) =>
     {
         return <div className="Item-list">
             {(items.length === 0) ?
-                <p>沒有物品</p> :
+                <p>No Items</p> :
                 items.map(item => <MaterialItem key={item.id} {...item} onRemove={() => onRemove(item.id)} />)}
         </div>;
     }

@@ -5,7 +5,7 @@ import ProductItem from './ProductItem'
 const ProductItemList = ({ items=[], onRemove=f=>f }) =>
     <div className="Item-list">
         {(items.length === 0) ?
-            <p>沒有物品</p> :
+            <p>No Items</p> :
             items.map(item =>
                 <ProductItem key={item.id}
                        {...item}

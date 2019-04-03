@@ -16,11 +16,11 @@ const App = () =>
     <Row><ShowItem /></Row>
   </Col>
   <Col lg={3}>
-    <p>材料</p>
+    <p>Material</p>
     <MaterialItems />
   </Col>
   <Col lg={3}>
-    <p>成品</p>
+    <p>Production</p>
     <ProductItems />
   </Col>
 </Row>

@@ -7,12 +7,12 @@ const Showresult = ({ calresult={}, onclearResult=f=>f}) =>
         return ( Object.keys(calresult) <= 0 ) ?
                 <p></p> :
                 <section className="item">
-                    <p>生產順序:{productNames.join(" => ")}</p>
-                    <p>原料名單:{materialNames.map((item, i ) => `${item}需要${needAmounts[i]}個`).join(", ")}</p>
-                    <p>總生產次數:{totalAmount}</p>
-                    <p>成品總生產量:{productNames.map((item, i ) => `${item}生產${productAmounts[i]}個共${productValues[i] * productAmounts[i]}元`).join(", ")}</p>
-                    <p>原料總需求量:{materialNames.map((item, i ) => `${item}需要${materialAmounts[i]}個共${materialValues[i] * materialAmounts[i]}元`).join(", ")}</p>
-                    <button onClick={onclearResult}>清除結果</button>
+                    <p>Production Order:{productNames.join(" => ")}</p>
+                    <p>Formula:{materialNames.map((item, i ) => `${item} need ${needAmounts[i]} `).join(", ")}</p>
+                    <p>Total Production Times:{totalAmount}</p>
+                    <p>Production List:{productNames.map((item, i ) => `${item} produce ${productAmounts[i]} piece with ${productValues[i] * productAmounts[i]} Coins`).join(", ")}</p>
+                    <p>Material List:{materialNames.map((item, i ) => `${item} need ${materialAmounts[i]} piece with ${materialValues[i] * materialAmounts[i]} Coins`).join(", ")}</p>
+                    <button onClick={onclearResult}>Clear</button>
                 </section>
     }
 

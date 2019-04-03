@@ -22,28 +22,28 @@ const AddItemForm = ({onNewItem=f=>f}) => {
        <table>
        <tbody>
        <tr>
-              <td>物品名稱</td>
-              <td><input ref={input => _title = input} type="text" placeholder="物品名稱" required/></td>
+              <td>Item Name</td>
+              <td><input ref={input => _title = input} type="text" placeholder="Item Name" required/></td>
        </tr>
        <tr>
-              <td>起始等級</td>
-              <td><input ref={input => _minLv = input} type="number" placeholder="起始等級" required/></td>
+              <td>Min Level</td>
+              <td><input ref={input => _minLv = input} type="number" placeholder="Min Level" required/></td>
        </tr>
        <tr>
-              <td>下限機率</td>
-              <td><input ref={input => _minPr = input} type="number" placeholder="下限機率" required/></td>
+              <td>Min Pro</td>
+              <td><input ref={input => _minPr = input} type="number" placeholder="Min Pro" required/></td>
        </tr>
        <tr>
-              <td>上限機率</td>
-              <td><input ref={input => _maxPr = input} type="number" placeholder="上限機率" required/></td>
+              <td>Max Pro</td>
+              <td><input ref={input => _maxPr = input} type="number" placeholder="Max Pro" required/></td>
        </tr>
        <tr>
-              <td>系統價格</td>
-              <td><input ref={input => _value = input} type="number" placeholder="系統價格" required/></td>
+              <td>Value</td>
+              <td><input ref={input => _value = input} type="number" placeholder="Value" required/></td>
        </tr>
        <tr>
-              <td>經驗值</td>
-              <td><input ref={input => _exp = input} type="number" placeholder="經驗值" required/></td>
+              <td>Exp</td>
+              <td><input ref={input => _exp = input} type="number" placeholder="Exp" required/></td>
        </tr>
        </tbody>
        </table>

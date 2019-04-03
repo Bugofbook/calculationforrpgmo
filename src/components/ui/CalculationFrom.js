@@ -17,20 +17,20 @@ const CalculationForm = ({onCalculation=f=>f}) => {
        <table>
        <tbody>
        <tr>
-              <td>現在技能等級</td>
-              <td><input ref={input => _nowlevel = input} type="number" placeholder="起始等級" required/></td>
+              <td>Now Level</td>
+              <td><input ref={input => _nowlevel = input} type="number" placeholder="Target Level" required/></td>
        </tr>
        <tr>
-              <td>目標技能等級</td>
-              <td><input ref={input => _targetlevel = input} type="number" placeholder="目標等級" required/></td>
+              <td>Target Level</td>
+              <td><input ref={input => _targetlevel = input} type="number" placeholder="Target Level" required/></td>
        </tr>
        <tr>
-              <td>升級所需經驗</td>
-              <td><input ref={input => _nextexp = input} type="number" placeholder="下個等級所需經驗值" required/></td>
+              <td>Next Exp</td>
+              <td><input ref={input => _nextexp = input} type="number" placeholder="Next Exp" required/></td>
        </tr>
        </tbody>
        </table>
-              <button>計算結果</button>
+              <button>Calculate</button>
        </form>
     )
 
