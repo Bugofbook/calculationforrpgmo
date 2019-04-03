@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/calculationforrpgmo/precache-manifest.9833ca378d185cfc09a710aa967fe440.js"
+  "/calculationforrpgmo/precache-manifest.225c670e07491268c0219778dc54dcf7.js"
 );
 
 workbox.clientsClaim();
