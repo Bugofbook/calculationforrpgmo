@@ -1,6 +1,7 @@
 import React from 'react';
-import App from '../components/App'
-import { NavLink } from 'react-router-dom'
+import { NavLink} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Col, Row } from "react-bootstrap";
 
 import '../stylesheets/pages.scss'
 
@@ -9,14 +10,25 @@ const selectedStyle = {
     color: "slategray"
 }
     
-const Mainpages = ({children}) =>
-    <div className="Mainpage">
+export const Mainpages = ({children}) =>
+<Container style={{margin: 0}}>
+    <Row>
+    <Col lg={2}>
+    <Mainmenu />
+    </Col>
+    <Col lg={10}>
+    {children}
+    </Col>
+    </Row>
+</Container>
+/*
+<div className="Mainpage">
         <Mainmenu />
-        <section className="content">
+        <div className="main-content">
             {children}
-        </section>
+        </div>
     </div>
-    
+*/    
 const Mainmenu = () =>
     <nav className="main-menu">
         <NavLink to="/">
@@ -43,7 +55,16 @@ export const Home = () =>
 
 export const Combat = () =>
     <Mainpages>
-        <h1>Combat Page</h1>
+    <Container>
+    <Row>
+        <p>TopCombat Page</p>
+    </Row>
+    <Row>
+        <Col>Content1</Col>
+        <Col>Content2</Col>
+        <Col>Content3</Col>
+    </Row>
+    </Container>
     </Mainpages>
 
 export const Gathering = () =>
@@ -56,12 +77,8 @@ export const Crafting = () =>
         <h1>Crafting Page</h1>
     </Mainpages>
 
-export const Calculation = () =>
-    <Mainpages>
-        <App />
-    </Mainpages>
-
 export const Whoops404 = ({ location }) =>
-    <div className="Whoops-404">
-        <hi>找不到以'{location.pathname}'為名稱的分頁</hi>
+    <div className="whoops-404">
+        <hi>we can not find '{location.pathname}' Page.</hi>
     </div>
+

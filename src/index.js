@@ -4,8 +4,9 @@ import { Provider } from 'react-redux';
 import { HashRouter, Route, Switch } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 
-import { Home, Combat, Crafting, Calculation, Gathering, Whoops404 } from "./pages";
 import storeFactory from './store';
+import { Home, Combat, Crafting, Gathering, Whoops404 } from "./pages";
+import { Calculation } from "./pages/caculation";
 
 const store = storeFactory()
 
